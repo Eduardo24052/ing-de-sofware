@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información para Visitantes </title>
+    <link rel="stylesheet" href="css/visitantes.css">
+   
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenidos aL TECNOLOGICO SUPERIOR DE JALISCO</h1>
+        <p>Información para Visitantes</p>
+    </header>
+
+    <div class="container">
+        <h2>Datos Necesarios para Visitar TECNOLOGICO SUPERIOR DE JALISCO</h2>
+        <p>Para garantizar una visita segura y organizada, por favor proporcione la siguiente información:</p>
+        
+        <ul>
+            <li><strong>Nombre completo:</strong> Nombre y apellidos del visitante.</li>
+            <li><strong>Motivo de la visita:</strong> Razón por la cual desea visitar la escuela (reunión, entrevista, entrega de documentos, etc.).</li>
+            <li><strong>Fecha y hora de la visita:</strong> Día y hora en que planea visitar la escuela.</li>
+            <li><strong>Persona a visitar:</strong> Nombre del personal o estudiante que desea visitar.</li>
+            <li><strong>Número de identificación:</strong> Documento de identidad (DNI, pasaporte, etc.).</li>
+            <li><strong>Número de contacto:</strong> Teléfono o correo electrónico para contactarlo en caso necesario.</li>
+        </ul>
+
+        <h2>Procedimiento de Visita</h2>
+        <p>Una vez que haya proporcionado la información requerida, siga estos pasos:</p>
+        <ol>
+            <li>Presentarse en la recepción de la escuela con su identificación.</li>
+            <li>Registrarse en el libro de visitantes.</li>
+            <li>Esperar a que el personal lo reciba y lo acompañe al área correspondiente.</li>
+        </ol>
+
+        <h2>Formulario de Visita</h2>
+        <div class="formulario">
+            <form>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
+
+                <label for="motivo">Motivo de la visita:</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">Seleccione un motivo</option>
+                    <option value="reunion">Reunión con personal</option>
+                    <option value="entrevista">Entrevista</option>
+                    <option value="documentos">Entrega de documentos</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="fecha">Fecha de la visita:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="hora">Hora de la visita:</label>
+                <input type="time" id="hora" name="hora" required>
+
+                <label for="persona">Persona a visitar:</label>
+                <input type="text" id="persona" name="persona" placeholder="Nombre de la persona" required>
+
+                <label for="identificacion">Número de identificación:</label>
+                <input type="text" id="identificacion" name="identificacion" placeholder="DNI, pasaporte, etc." required>
+
+                <label for="contacto">Número de contacto:</label>
+                <input type="text" id="contacto" name="contacto" placeholder="Teléfono o correo electrónico" required>
+
+                <label for="comentarios">Comentarios adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escriba aquí si tiene alguna observación"></textarea>
+
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+        </div>
+
+        <h2>Contacto</h2>
+        <p>Si tiene alguna pregunta o necesita más información, no dude en contactarnos:</p>
+        <p><strong>Teléfono:</strong> +123 456 7890</p>
+        <p><strong>Correo electrónico:</strong> info@Tecnm_chapala.com</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Escuela Ejemplo. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

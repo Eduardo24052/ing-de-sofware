@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préstamo de Balones -</title>
+    <link rel="stylesheet" href="css/balones.css">
+    
+</head>
+<body>
+
+    <header>
+        <h1>Préstamo de Balones Deportivos</h1>
+        <p>TECNOLOGICO CHAPALA- Completa el formulario para solicitar balones</p>
+    </header>
+
+    <div class="container">
+        <h2>Instrucciones</h2>
+        <p>
+            Para solicitar el préstamo de balones deportivos, completa el siguiente formulario con los datos requeridos. 
+            Asegúrate de proporcionar información precisa y verificar que todos los campos estén correctamente llenados.
+        </p>
+
+        <h2>Formulario de Solicitud</h2>
+        <div class="formulario">
+            <form>
+                <!-- Datos del alumno -->
+                <label for="numeroControl">Número de Control del Alumno:</label>
+                <input type="text" id="numeroControl" name="numeroControl" placeholder="Ingresa tu número de control" required>
+
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+
+                <label for="carrera">Carrera:</label>
+                <select id="carrera" name="carrera" required>
+                    <option value="">Selecciona tu carrera</option>
+                    <option value="ingenieria">Ingeniería en Sistemas</option>
+                    <option value="administracion">Administración de Empresas</option>
+                    <option value="contabilidad">Contabilidad</option>
+                    <option value="derecho">Derecho</option>
+                    <option value="otro">Otra</option>
+                </select>
+
+                <label for="semestre">Semestre:</label>
+                <input type="number" id="semestre" name="semestre" min="1" max="12" placeholder="Ingresa tu semestre" required>
+
+                <!-- Tipo de balón -->
+                <label for="tipoBalon">Tipo de Balón:</label>
+                <select id="tipoBalon" name="tipoBalon" required>
+                    <option value="">Selecciona el tipo de balón</option>
+                    <option value="futbol">Balón de Fútbol</option>
+                    <option value="basquetbol">Balón de Basquetbol</option>
+                    <option value="voleibol">Balón de Voleibol</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <!-- Cantidad de balones -->
+                <label for="cantidad">Cantidad de Balones:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="5" placeholder="Ingresa la cantidad de balones" required>
+
+                <!-- Fecha de préstamo -->
+                <label for="fechaPrestamo">Fecha de Préstamo:</label>
+                <input type="date" id="fechaPrestamo" name="fechaPrestamo" required>
+
+                <!-- Fecha de devolución -->
+                <label for="fechaDevolucion">Fecha de Devolución:</label>
+                <input type="date" id="fechaDevolucion" name="fechaDevolucion" required>
+
+                <!-- Comentarios adicionales -->
+                <label for="comentarios">Comentarios Adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe aquí si tienes alguna observación"></textarea>
+
+                <!-- Botón de envío -->
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+        </div>
+
+        <h2>Requisitos</h2>
+        <ul>
+            <li>Ser alumno activo de TECNOLOGICO CHAPALA</li>
+            <li>Contar con número de control vigente.</li>
+            <li>No tener préstamos pendientes de balones.</li>
+            <li>Devolver el balón en buen estado y en la fecha indicada.</li>
+        </ul>
+
+        <h2>Contacto</h2>
+        <p>Si tienes dudas o necesitas más información, contacta al departamento de deportes:</p>
+        <p><strong>Teléfono:</strong> +123 456 7890</p>
+        <p><strong>Correo electrónico:</strong> deportes@escuela-ejemplo.com</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 TECNOLOGICO CHAPALA. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

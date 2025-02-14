@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Biblioteca - Tecnológico Chapala</title>
+    <link rel="stylesheet" href="css/biblioteca.css">
+</head>
+<body>
+
+    <header>
+        <h1>Servicios de Biblioteca - Tecnológico Chapala</h1>
+        <p>Completa el formulario para solicitar libros, impresiones y otros servicios</p>
+    </header>
+
+    <div class="container">
+        <h2>Instrucciones</h2>
+        <p>
+            Para solicitar servicios de la biblioteca (préstamo de libros, impresiones, etc.), completa el siguiente formulario con los datos requeridos. 
+            Asegúrate de proporcionar información precisa y verificar que todos los campos estén correctamente llenados.
+        </p>
+
+        <h2>Formulario de Solicitud</h2>
+        <div class="formulario">
+            <form>
+                <!-- Datos del alumno -->
+                <label for="numeroControl">Número de Control:</label>
+                <input type="text" id="numeroControl" name="numeroControl" placeholder="Ingresa tu número de control" required>
+
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+
+                <label for="carrera">Carrera:</label>
+                <select id="carrera" name="carrera" required>
+                    <option value="">Selecciona tu carrera</option>
+                    <option value="sistemas">Ingeniería en Sistemas</option>
+                    <option value="administracion">Administración</option>
+                    <option value="contabilidad">Contabilidad</option>
+                    <option value="mecanica">Ingeniería Mecánica</option>
+                    <option value="otro">Otra</option>
+                </select>
+
+                <label for="semestre">Semestre:</label>
+                <input type="number" id="semestre" name="semestre" min="1" max="12" placeholder="Ingresa tu semestre" required>
+
+                <!-- Tipo de servicio -->
+                <label for="tipoServicio">Tipo de Servicio:</label>
+                <select id="tipoServicio" name="tipoServicio" required>
+                    <option value="">Selecciona el tipo de servicio</option>
+                    <option value="libro">Préstamo de Libro</option>
+                    <option value="impresion">Impresión de Documentos</option>
+                    <option value="revista">Préstamo de Revista</option>
+                    <option value="sala">Reserva de Sala de Estudio</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <!-- Detalles del servicio -->
+                <label for="detalles">Detalles del Servicio:</label>
+                <textarea id="detalles" name="detalles" rows="4" placeholder="Describe el servicio que necesitas (título del libro, número de páginas a imprimir, etc.)" required></textarea>
+
+                <!-- Apartado para cargar documento -->
+                <label for="documento">Cargar Documento para Imprimir:</label>
+                <input type="file" id="documento" name="documento" accept=".pdf,.doc,.docx,.jpg,.png" required>
+
+                <!-- Fecha de solicitud -->
+                <label for="fechaSolicitud">Fecha de Solicitud:</label>
+                <input type="date" id="fechaSolicitud" name="fechaSolicitud" required>
+
+                <!-- Comentarios adicionales -->
+                <label for="comentarios">Comentarios Adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe aquí si tienes alguna observación"></textarea>
+
+                <!-- Botón de envío -->
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+        </div>
+
+        <h2>Requisitos</h2>
+        <ul>
+            <li>Ser alumno activo del Tecnológico Chapala.</li>
+            <li>Contar con número de control vigente.</li>
+            <li>No tener préstamos pendientes de libros o materiales.</li>
+            <li>Entregar los materiales prestados en buen estado y en la fecha indicada.</li>
+        </ul>
+
+        <h2>Contacto</h2>
+        <p>Si tienes dudas o necesitas más información, contacta a la biblioteca:</p>
+        <p><strong>Teléfono:</strong> +52 376 765 4321</p>
+        <p><strong>Correo electrónico:</strong> biblioteca@tecnologicochapala.edu.mx</p>
+        <p><strong>Horario de atención:</strong> Lunes a Viernes, 8:00 AM - 6:00 PM</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Tecnológico Chapala. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

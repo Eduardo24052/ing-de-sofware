@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Materias - Tecnológico Chapala</title>
+    <link rel="stylesheet" href="css/materias.css">
+    
+</head>
+<body>
+
+    <header>
+        <h1>Buscar Materias - Tecnológico Chapala</h1>
+        <p>Ingresa el nombre de la materia para encontrar su horario y maestro</p>
+    </header>
+
+    <div class="container">
+        <h2>Buscar Materia</h2>
+        <div class="formulario">
+            <form id="buscarMateriaForm">
+                <label for="materia">Nombre de la Materia:</label>
+                <input type="text" id="materia" name="materia" placeholder="Ingresa el nombre de la materia" required>
+                <button type="button" onclick="buscarMateria()">Buscar</button>
+            </form>
+        </div>
+
+        <table id="resultadosTabla" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Materia</th>
+                    <th>Horario</th>
+                    <th>Maestro</th>
+                </tr>
+            </thead>
+            <tbody id="resultadosBody">
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Tecnológico Chapala. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const materias = [
+            { nombre: 'Matemáticas I', horario: 'Lunes 8:00 - 10:00', maestro: 'Prof. García' },
+            { nombre: 'Programación', horario: 'Martes 10:00 - 12:00', maestro: 'Ing. Hernández' },
+            { nombre: 'Física', horario: 'Miércoles 8:00 - 10:00', maestro: 'Dr. López' },
+            // Añade más materias aquí
+        ];
+
+        function buscarMateria() {
+            const nombreMateria = document.getElementById('materia').value.toLowerCase();
+            const resultados = materias.filter(materia => materia.nombre.toLowerCase().includes(nombreMateria));
+
+            const resultadosBody = document.getElementById('resultadosBody');
+            resultadosBody.innerHTML = '';
+
+            if (resultados.length > 0) {
+                resultados.forEach(materia => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${materia.nombre}</td><td>${materia.horario}</td><td>${materia.maestro}</td>`;
+                    resultadosBody.appendChild(row);
+                });
+                document.getElementById('resultadosTabla').style.display = 'table';
+            } else {
+                alert('No se encontraron materias que coincidan con la búsqueda.');
+                document.getElementById('resultadosTabla').style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>

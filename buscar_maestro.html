@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Maestro</title>
+    <link rel="stylesheet" href="css/buscar_maestro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Buscar Maestro</h1>
+        <label for="nombre">Nombre del Maestro:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del maestro...">
+        <label for="materia">Materia:</label>
+        <input type="text" id="materia" name="materia" placeholder="Ingrese la materia...">
+        <label for="horario">Horario:</label>
+        <input type="text" id="horario" name="horario" placeholder="Ingrese el horario...">
+        <button onclick="buscarMaestro()">Buscar</button>
+        <div class="results" id="results"></div>
+    </div>
+    <script>
+        function buscarMaestro() {
+            // Simulación de datos obtenidos desde el servidor
+            const resultados = [
+                { nombre: 'Juan Pérez', materia: 'Matemáticas', ubicacion: 'Aula 101, 10:00 - 12:00' },
+                { nombre: 'Ana Gómez', materia: 'Física', ubicacion: 'Aula 202, 12:00 - 14:00' },
+                { nombre: 'Carlos López', materia: 'Química', ubicacion: 'Aula 303, 14:00 - 16:00' }
+            ];
+
+            const nombre = document.getElementById('nombre').value.toLowerCase();
+            const materia = document.getElementById('materia').value.toLowerCase();
+            const horario = document.getElementById('horario').value.toLowerCase();
+
+            const resultadosFiltrados = resultados.filter(maestro => 
+                maestro.nombre.toLowerCase().includes(nombre) && 
+                maestro.materia.toLowerCase().includes(materia) && 
+                maestro.ubicacion.toLowerCase().includes(horario)
+            );
+
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';
+
+            if (resultadosFiltrados.length > 0) {
+                resultadosFiltrados.forEach(maestro => {
+                    const div = document.createElement('div');
+                    div.className = 'result-item';
+                    div.innerHTML = `<strong>Nombre:</strong> ${maestro.nombre}<br>
+                                     <strong>Materia:</strong> ${maestro.materia}<br>
+                                     <strong>Ubicación:</strong> ${maestro.ubicacion}`;
+                    resultsContainer.appendChild(div);
+                });
+            } else {
+                resultsContainer.innerHTML = 'No se encontraron resultados.';
+            }
+        }
+    </script>
+</body>
+</html>
