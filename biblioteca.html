@@ -22,57 +22,58 @@
 
         <h2>Formulario de Solicitud</h2>
         <div class="formulario">
-            <form>
-                <!-- Datos del alumno -->
+            <form action="https://formsubmit.co/lalocancer14@hotmail.com" method="POST" enctype="multipart/form-data">
+                
+                <input type="hidden" name="_next" value="formBiblioteca.html">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" id="subject" name="_subject" value="Nueva Solicitud de Biblioteca">
+        
                 <label for="numeroControl">Número de Control:</label>
-                <input type="text" id="numeroControl" name="numeroControl" placeholder="Ingresa tu número de control" required>
-
+                <input type="text" id="numeroControl" name="Número de Control" required>
+        
                 <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
-
+                <input type="text" id="nombre" name="Nombre Completo" required>
+        
                 <label for="carrera">Carrera:</label>
-                <select id="carrera" name="carrera" required>
-                    <option value="">Selecciona tu carrera</option>
+                <select id="carrera" name="Carrera" required>
                     <option value="sistemas">Ingeniería en Sistemas</option>
                     <option value="administracion">Administración</option>
                     <option value="contabilidad">Contabilidad</option>
                     <option value="mecanica">Ingeniería Mecánica</option>
                     <option value="otro">Otra</option>
                 </select>
-
-                <label for="semestre">Semestre:</label>
-                <input type="number" id="semestre" name="semestre" min="1" max="12" placeholder="Ingresa tu semestre" required>
-
-                <!-- Tipo de servicio -->
+        
                 <label for="tipoServicio">Tipo de Servicio:</label>
-                <select id="tipoServicio" name="tipoServicio" required>
-                    <option value="">Selecciona el tipo de servicio</option>
+                <select id="tipoServicio" name="Tipo de Servicio" required>
                     <option value="libro">Préstamo de Libro</option>
                     <option value="impresion">Impresión de Documentos</option>
                     <option value="revista">Préstamo de Revista</option>
                     <option value="sala">Reserva de Sala de Estudio</option>
                     <option value="otro">Otro</option>
                 </select>
-
-                <!-- Detalles del servicio -->
+        
                 <label for="detalles">Detalles del Servicio:</label>
-                <textarea id="detalles" name="detalles" rows="4" placeholder="Describe el servicio que necesitas (título del libro, número de páginas a imprimir, etc.)" required></textarea>
-
-                <!-- Apartado para cargar documento -->
-                <label for="documento">Cargar Documento para Imprimir:</label>
-                <input type="file" id="documento" name="documento" accept=".pdf,.doc,.docx,.jpg,.png" required>
-
-                <!-- Fecha de solicitud -->
+                <textarea id="detalles" name="Detalles del Servicio" rows="4" required></textarea>
+        
+                <label for="documento">Cargar Documento:</label>
+                <input type="file" id="documento" name="Documento" accept=".pdf,.doc,.docx,.jpg,.png">
+        
                 <label for="fechaSolicitud">Fecha de Solicitud:</label>
-                <input type="date" id="fechaSolicitud" name="fechaSolicitud" required>
-
-                <!-- Comentarios adicionales -->
+                <input type="date" id="fechaSolicitud" name="Fecha de Solicitud" required>
+        
                 <label for="comentarios">Comentarios Adicionales:</label>
-                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe aquí si tienes alguna observación"></textarea>
-
-                <!-- Botón de envío -->
+                <textarea id="comentarios" name="Comentarios Adicionales" rows="4"></textarea>
+        
                 <button type="submit">Enviar Solicitud</button>
             </form>
+        
+            <script>
+                document.getElementById("nombre").addEventListener("input", function() {
+                    let nombre = this.value;
+                    document.getElementById("subject").value = "Solicitud de Biblioteca de " + nombre + numeroControl;
+                });
+            </script>
+            
         </div>
 
         <h2>Requisitos</h2>
